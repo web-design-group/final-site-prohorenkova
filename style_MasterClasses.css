@@ -1,0 +1,404 @@
+
+.master-container {
+  max-width: 1500px;
+  padding: 60px 20px;
+}
+
+.master-title {
+  font-family: 'obrazec', sans-serif;
+  font-size: clamp(42px, 12vw, 320px);
+  color: #415A77;
+  margin-bottom: 120px;
+  letter-spacing: 2px;
+  margin-left: 60px;
+}
+
+.carousel-section {
+  margin-bottom: 120px;
+}
+
+.carousel-section:last-child {
+  margin-bottom: 0;
+}
+
+.new-title {
+  font-family: 'formular3', sans-serif;
+  font-size: 64px;
+  color: #0D1B2A;
+  font-weight: 600;
+  margin-bottom: 40px;
+  margin-left: 60px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.carousel-arrow {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.carousel-arrow:focus,
+.carousel-arrow:active,
+.carousel-arrow:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.arrow-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Обертка карусели */
+.carousel-wrapper {
+  overflow: hidden;
+  width: calc(440px * 3 + 40px);
+  max-width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.master-card {
+  width: 440px;
+  min-width: 440px;
+  height: 682px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.master-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image {
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 440px;
+  height: 440px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.master-card:hover .card-image img {
+  transform: scale(1.02);
+}
+
+.card-content {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-title {
+  font-family: 'formular3', sans-serif;
+  font-size: 20px;
+  color: #0D1B2A;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.card-subtitle {
+  font-family: 'onest', sans-serif;
+  font-size: 16px;
+  color: #415A77;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  flex: 1;
+}
+
+.card-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #0D1B2A;
+  color: #FFFFFF;
+  font-family: "formular", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.card-btn:hover {
+  background-color: #B1C4D8;
+  color: #0D1B2A;
+  transform: translateY(-2px);
+}
+
+.card-btn:focus,
+.card-btn:active,
+.card-btn:focus-visible {
+  outline: none;
+}
+
+.footer-section {
+  background-color: #778da9;
+  margin-top: 40px;
+}
+
+.footer-title {
+  font-family: 'formular3', sans-serif;
+  font-size: 20px;
+  color: #0d1b2a;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.footer-link-item {
+  font-family: "Onest", sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-link-item:hover {
+  color: #0d1b2a;
+  text-decoration: underline;
+}
+
+.footer-text-item {
+  font-family: "Onest", sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+
+.footer-copyright {
+  font-family: "formular0", sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+button {
+  outline: none;
+  box-shadow: none;
+}
+
+button:focus,
+button:active,
+button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+
+@media (max-width: 1400px) {
+  .carousel-wrapper {
+    width: calc(440px * 2 + 20px);
+  }
+
+  .new-title {
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .carousel-wrapper {
+    width: 440px;
+  }
+
+  .master-title {
+    font-size: 48px;
+    margin-bottom: 80px;
+  }
+
+  .new-title {
+    font-size: 44px;
+  }
+
+  .carousel-section {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .master-title {
+    font-size: 42px;
+    margin-bottom: 60px;
+  }
+
+  .new-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .carousel-section {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .master-container {
+    padding: 40px 15px;
+  }
+
+  .master-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  .new-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+  }
+
+  .master-card {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .card-btn {
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .carousel-section {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .master-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .new-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .carousel-container {
+    gap: 10px;
+  }
+
+  .carousel-arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .arrow-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .card-image {
+    height: auto;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    padding-top: 15px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .carousel-section {
+    margin-bottom: 40px;
+  }
+}
+
+.nav-group {
+  padding-block: 22px !important;
+  padding-inline: 280px !important;
+  gap: 20px !important;
+}
+
+.nav-group .nav-link {
+  font-size: 18px !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 1200px) {
+  .nav-group {
+    padding-inline: 40px !important;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-group {
+    padding-inline: 20px !important;
+  }
+}
